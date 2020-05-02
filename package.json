@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --env.NODE_ENV='local' --config  ./webpack/webpack.local.config.js",
     "build": "webpack --env.NODE_ENV='production' --config ./webpack/webpack.config.js",
-    "deploy": "aws s3 sync dist/ s3://countdowntocats.com --delete"
+    "deploy": "aws s3 sync dist/ s3://thecheckpointleague.com --delete"
   },
   "keywords": [],
   "author": "",

@@ -28,6 +28,9 @@ const Header = (): ReactElement => {
     return (
         <div className='header'>
             <div className='slideOverButton' onClick={() => setSideMenu(true)}><i className="fas fa-bars"></i></div>
+            <a target="_blank" href='https://github.com/BradeyYWhitlock/thecheckpointleague' className='githubLink'>
+                <i className="fab fa-github"></i>
+            </a>
             <Drawer open={sideMenu} onClose={() => setSideMenu(false)}>
                 <div className='sideMenu'>
                     <div className='seasonItem'>Season 1</div>

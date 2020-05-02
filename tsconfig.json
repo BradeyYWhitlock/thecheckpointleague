@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "outDir": "dist",
+        "target": "es2018",
+        "lib": [
+            "es2018",
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": false,
+        "noEmit": false,
+        "jsx": "react",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "include": [
+        "src",
+        "./custom.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}

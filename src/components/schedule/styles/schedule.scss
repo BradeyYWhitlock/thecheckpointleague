@@ -1,0 +1,27 @@
+.schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &Image {
+        max-height: 90vh;
+        width: 95%;
+        height: auto;
+        max-width: 1310px;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        max-width: 1310px;
+    }
+}
+
+.scheduleMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px 0px 20px 0px;
+    font-size: 30px;
+}

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'TCL';
+    src: url('../../assets/tcl.ttf') format('truetype');
+}
+
+body {
+    width: 100%;
+    font-family: 'TCL';
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 55px;
+    background-color: #F3B136;
+    font-size: 30px;
+    width: 100%;
+}
+
+.navItem {
+    width: 130px;
+    cursor: pointer;
+    text-align: center;
+    color: #202437;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.slideOverButton {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin-left: 5px;
+    color: #202437;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.sideMenu {
+    width: 200px;
+    background-color: #F3B136;
+    height: 100vh;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.seasonItem {
+    text-align: center;
+    height: fit-content;
+    width: 80%;
+    border-bottom: 2px solid #0B0D19;
+}
+
+.mobileSelected {
+    color: #0B0D19 !important;
+}
+
+.selected {
+    color: white !important;
+}
+
+.mobileNavItem {
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        position: absolute;
+        background-color: #0B0D19;
+    }
+
+    .slideOverButton {
+        color: white;
+        &:hover {
+            color: #F3B136;
+        }
+    }
+  }

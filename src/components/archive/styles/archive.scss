@@ -1,0 +1,43 @@
+.archive {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.weekSelector {
+    width: 200px;
+    color: #0B0D19;
+    margin: 50px 0px;
+}
+
+.weekSelectBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.weekVideos {
+    margin-bottom: 100px;
+}
+
+.matchup {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #F3B136;
+    text-shadow: -1px 0 #202437, 0 1px #202437, 1px 0 #202437, 0 -1px #202437;
+}
+
+@media only screen and (max-width: 500px) {
+    .matchup {
+        font-size: 30px;
+    }
+
+    .weekSelector {
+        margin: 20px 0px;
+    }
+
+    .matchup {
+        margin-top: 10px;
+    }
+  }

@@ -27,7 +27,7 @@ const Levels = (): ReactElement => {
         {levelImg: Level6, levelCode: 'CHS-90B-R1G', clearCheckVid: Level1ClearCheck, clearRate: '0.13%', clearTime: '1HRS 55MIN', finished: true},
         {levelImg: Level7, levelCode: 'MWJ-17B-7MF', clearCheckVid: Level1ClearCheck, clearRate: '0.40%', clearTime: '2HRS 47MIN', finished: true},
         {levelImg: Level8, levelCode: 'XHQ-4TB-NGG', clearCheckVid: Level1ClearCheck, clearRate: '0.19%', clearTime: '7HRS 30MIN', finished: true},
-        {levelImg: Level9, levelCode: '9SM-B1J-LFF', clearCheckVid: Level1ClearCheck, clearRate: '0.13%', clearTime: '3HRS 50MIN', finished: false},
+        {levelImg: Level9, levelCode: '9SM-B1J-LFF', clearCheckVid: Level1ClearCheck, clearRate: '0.13%', clearTime: '3HRS 50MIN', finished: true},
         {levelImg: Level10, levelCode: '2DC-L45-KVG', clearCheckVid:Level1ClearCheck, clearRate: '0.28%', clearTime: '3HRS 20MIN', finished: false}
     ]
 
@@ -40,7 +40,7 @@ const Levels = (): ReactElement => {
             {selectedLevel === '' ?
             <div className='allLevels'>
                 {levels.map(it => (
-                    <div className='levelItemClick' onClick={() => setSelectedLevel(it.levelCode)}>
+                    <div className='levelItemClick'>
                         <img className='levelItem' src={it.levelImg}/>
                         <div className={`clearedFlag ${!it.finished && 'notCleared'}`}><img src={Flag}/></div>
                         <div className='levelCode'>{it.levelCode}</div>

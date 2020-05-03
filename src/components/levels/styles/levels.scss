@@ -33,6 +33,10 @@
     padding: 32px 81px;
     opacity: .85;
 
+    &:hover {
+        opacity: 0;
+    }
+
     & img {
         opacity: 1;
     }

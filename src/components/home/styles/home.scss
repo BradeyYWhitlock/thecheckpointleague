@@ -31,6 +31,33 @@
     }
 }
 
+.liveButton {
+    background-color: #F3B136;
+    padding: 20px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    animation: shadow-pulse 2s infinite;
+    box-shadow: 0 0 0 0px 1px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-shadow: -1px 0 #202437, 0 1px #202437, 1px 0 #202437, 0 -1px #202437;
+    }
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px orange;
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+  }
+}
+
 .nextStream {
     top: 18px;
     right: 10px;
@@ -52,5 +79,10 @@
 
     .nextStream {
         font-size: 20px;
+    }
+
+    .liveButton {
+        padding: 10px;
+        font-size: 30px;
     }
   }

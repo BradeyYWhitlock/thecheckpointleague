@@ -2,11 +2,16 @@ import React, { ReactElement, useState, useEffect} from 'react';
 import '../styles/main.scss'
 import { NavLink } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
+import moment from 'moment'
 
 const Header = (): ReactElement => {
+    const streamDay = moment().day(5).hour(13).minutes(30);
+    const now = new Date()
+
     var location = window.location.pathname.substring(1)
     location = location === '' ? 'home' : location
     const [page, setPage] = useState(location)
+    const [duration, setDuration] = useState(moment.duration(streamDay.diff(now)))
     const [sideMenu, setSideMenu] = useState(false)
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 500)
 
@@ -16,6 +21,12 @@ const Header = (): ReactElement => {
 
     useEffect(() => {
         window.addEventListener("resize", windowResized);
+        setInterval(() => {
+            const now = new Date()
+            const streamDay = moment().day(5).hour(13).minutes(30).utcOffset(-6);
+            var duration = moment.duration(streamDay.diff(now));
+            setDuration(duration)
+        }, 1000)
     }, [])
 
     const navClicked = (page: string) => {
@@ -23,14 +34,9 @@ const Header = (): ReactElement => {
         setPage(page)
     }
 
-    console.log(isMobile);
-
     return (
         <div className='header'>
             <div className='slideOverButton' onClick={() => setSideMenu(true)}><i className="fas fa-bars"></i></div>
-            <a target="_blank" href='https://github.com/BradeyYWhitlock/thecheckpointleague' className='githubLink'>
-                <i className="fab fa-github"></i>
-            </a>
             <Drawer open={sideMenu} onClose={() => setSideMenu(false)}>
                 <div className='sideMenu'>
                     <div className='seasonItem'>Season 1</div>
@@ -44,6 +50,9 @@ const Header = (): ReactElement => {
                     </>
                     }
                 </div>
+                <a target="_blank" href='https://github.com/BradeyYWhitlock/thecheckpointleague' className='githubLink'>
+                    <i className="fab fa-github"></i>
+                </a>
             </Drawer>
             {!isMobile &&
             <>
@@ -52,6 +61,7 @@ const Header = (): ReactElement => {
                 <NavLink onClick={() => navClicked('archive')} className={`navItem ${page === 'archive' && 'selected'}`} to='/archive'>ARCHIVE</NavLink>
                 <NavLink onClick={() => navClicked('standings')} className={`navItem ${page === 'standings' && 'selected'}`} to='/standings'>STANDINGS</NavLink>
                 <NavLink onClick={() => navClicked('levels')} className={`navItem ${page === 'levels' && 'selected'}`} to='/levels'>Levels</NavLink>
+            <div className='nextStream'>Next Stream: {duration.days()} Days • {duration.hours()} Hours • {duration.minutes()} Mins</div>
             </>}
         </div>
     )

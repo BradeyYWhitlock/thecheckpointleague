@@ -13,7 +13,7 @@ const Home = (): ReactElement => {
             {/* <div className='homeDescription'>
                 Small description about the checkpoint league.
             </div> */}
-            <iframe style={{border: 'none'}} width={isMobile ? "360" : "1120"} height={isMobile ? "200" : "630"} src='https://www.youtube.com/embed/CChwLKLT-dA' ></iframe>
+            <iframe className='trailerVideo' width={isMobile ? "360" : "1120"} height={isMobile ? "200" : "630"} src='https://www.youtube.com/embed/CChwLKLT-dA' ></iframe>
         </div>
     )
 }

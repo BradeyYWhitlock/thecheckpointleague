@@ -1,17 +1,14 @@
-import React, { ReactElement, useState, useEffect} from 'react';
+import React, { ReactElement, useState, useEffect } from 'react';
 import '../styles/main.scss'
 import { NavLink } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
-import moment from 'moment'
 
 const Header = (): ReactElement => {
-    const streamDay = moment().day(5).hour(13).minutes(30);
-    const now = new Date()
+
 
     var location = window.location.pathname.substring(1)
     location = location === '' ? 'home' : location
     const [page, setPage] = useState(location)
-    const [duration, setDuration] = useState(moment.duration(streamDay.diff(now)))
     const [sideMenu, setSideMenu] = useState(false)
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 500)
 
@@ -21,12 +18,6 @@ const Header = (): ReactElement => {
 
     useEffect(() => {
         window.addEventListener("resize", windowResized);
-        setInterval(() => {
-            const now = new Date()
-            const streamDay = moment().day(5).hour(13).minutes(30).utcOffset(-6);
-            var duration = moment.duration(streamDay.diff(now));
-            setDuration(duration)
-        }, 1000)
     }, [])
 
     const navClicked = (page: string) => {
@@ -61,7 +52,6 @@ const Header = (): ReactElement => {
                 <NavLink onClick={() => navClicked('archive')} className={`navItem ${page === 'archive' && 'selected'}`} to='/archive'>ARCHIVE</NavLink>
                 <NavLink onClick={() => navClicked('standings')} className={`navItem ${page === 'standings' && 'selected'}`} to='/standings'>STANDINGS</NavLink>
                 <NavLink onClick={() => navClicked('levels')} className={`navItem ${page === 'levels' && 'selected'}`} to='/levels'>Levels</NavLink>
-            <div className='nextStream'>Next Stream: {duration.days()} Days • {duration.hours()} Hours • {duration.minutes()} Mins</div>
             </>}
         </div>
     )

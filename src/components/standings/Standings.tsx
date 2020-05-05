@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
-import TCLLogo from '../../assets/images/tclLogo.png'
+import React, { ReactElement, useState, useEffect } from 'react';
 import Competitor from './Competitor';
+import Stats from './Stats';
 import './styles/standings.scss'
 
 const competitors = [
@@ -14,18 +14,39 @@ const competitors = [
 
 const Standings = (): ReactElement => {
 
+    const [selectedStats, setSelectedStats] = useState('northernlion')
+
     const isMobile = window.innerWidth <= 500
+
+    useEffect(() => {
+        isMobile && setSelectedStats('')
+    }, [])
 
     return (
         <div className='standings'>
-            {!isMobile && <div className='tclLogoStandings'>
-                <img src={TCLLogo}/>
-            </div>}
-            <div className='tclStandings'>
-                {competitors.map(competitor => {
-                    return <Competitor link={competitor.link} record={competitor.record} name={competitor.name}/>
-                })}
-            </div>
+            {!isMobile ?
+            <>
+                <div className='tclStandings'>
+                    {competitors.map(competitor => {
+                        return <Competitor selectedStats={selectedStats} onClick={() => setSelectedStats(competitor.name)}link={competitor.link} record={competitor.record} name={competitor.name}/>
+                    })}
+                </div>
+                <Stats selectedStats={selectedStats}/>
+            </> :
+            <>
+            {selectedStats === '' ?
+                <div className='tclStandings'>
+                    {competitors.map(competitor => {
+                        return <Competitor selectedStats={selectedStats} onClick={() => setSelectedStats(competitor.name)}link={competitor.link} record={competitor.record} name={competitor.name}/>
+                    })}
+                </div> :
+                <>
+                    <div onClick={() => setSelectedStats('')}className='backToOverallStats'><i style={{marginRight: '10px'}} className="fas fa-chevron-left"></i>Back To Standings</div>
+                    <Stats selectedStats={selectedStats}/>
+                </>
+            }
+            </>
+            }
         </div>
     )
 }

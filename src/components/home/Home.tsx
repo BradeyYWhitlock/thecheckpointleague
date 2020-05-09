@@ -5,9 +5,13 @@ import './styles/home.scss'
 import {isTclLive} from '../../services/TwitchService'
 
 const Home = (): ReactElement => {
-    const isMobile = window.innerWidth <= 500
-    const streamDay = moment().day(5).hour(13).minutes(30);
+    var friday = 5;
     const now = new Date()
+    if(now.getDay() === 5) {
+        friday = 5 + 7
+    }
+    const isMobile = window.innerWidth <= 500
+    const streamDay = moment().day(12).hour(13).minutes(30);
     const [duration, setDuration] = useState(moment.duration(streamDay.diff(now)))
     const [tclLive, setTclLive] = useState(false)
 
@@ -15,7 +19,7 @@ const Home = (): ReactElement => {
         isTclLive().then(res => {setTclLive(res)})
         setInterval(() => {
             const now = new Date()
-            const streamDay = moment().day(5).hour(13).minutes(30).utcOffset(-6);
+            const streamDay = moment().day(friday).hour(13).minutes(30).utcOffset(-6);
             var duration = moment.duration(streamDay.diff(now));
             setDuration(duration)
             isTclLive().then(res => {setTclLive(res)})

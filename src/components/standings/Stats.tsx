@@ -11,12 +11,12 @@ interface StatsProps {
 }
 
 const totalStats = {
-    baertaffy: {totalDeaths: '1307', dpm1: '3.25', dpm2: '2.898', dpm3: '3.326', tis1: '03:29:50', tis2: '02:12:09', tis3: '01:12:45', totalTime: '06:54:44'},
-    northernlion: {totalDeaths: '1341', dpm1: '2.941', dpm2: '2.875', dpm3: '3.883', tis1: '03:15:10', tis2: '03:13:46', tis3: '00:54:05', totalTime: '07:23:01'},
-    mathasgames: {totalDeaths: '1514', dpm1: '3.27', dpm2: '3.2', dpm3: '3.434', tis1: '05:08:54', tis2: '02:15:01', tis3: '00:20:58', totalTime: '07:44:53'},
-    hcjustin: {totalDeaths: '1556', dpm1: '3.462', dpm2: '3.022', dpm3: '4.319', tis1: '04:23:24', tis2: '02:50:24', tis3: '00:29:52', totalTime: '07:43:40'},
-    jaaski: {totalDeaths: '1638', dpm1: '3.339', dpm2: '3.461', dpm3: '6.63', tis1: '05:47:42', tis2: '02:06:16', tis3: '00:06:02', totalTime: '08:00:00'},
-    dangheesling: {totalDeaths: '1696', dpm1: '3.519', dpm2: '3.696', dpm3: 'N/A', tis1: '07:21:51', tis2: '00:38:09', tis3: '00:00:00', totalTime: '08:00:00'},
+    baertaffy: {totalDeaths: '1481', dpm1: '3.26', dpm2: '2.876', dpm3: '3.179', tis1: '03:43:30', tis2: '02:32:37', tis3: '01:38:28', totalTime: '07:54:44'},
+    northernlion: {totalDeaths: '1526', dpm1: '2.984', dpm2: '2.832', dpm3: '3.637', tis1: '03:20:03', tis2: '03:34:42', tis3: '01:28:16', totalTime: '08:23:01'},
+    mathasgames: {totalDeaths: '1688', dpm1: '3.279', dpm2: '3.085', dpm3: '3.434', tis1: '05:17:11', tis2: '03:06:44', tis3: '00:20:58', totalTime: '08:44:53'},
+    hcjustin: {totalDeaths: '1730', dpm1: '3.465', dpm2: '2.495', dpm3: '4.319', tis1: '04:37:20', tis2: '03:34:37', tis3: '00:31:43', totalTime: '08:43:40'},
+    jaaski: {totalDeaths: '1829', dpm1: '3.361', dpm2: '3.325', dpm3: '6.63', tis1: '06:19:23', tis2: '02:34:35', tis3: '00:06:02', totalTime: '09:00:00'},
+    dangheesling: {totalDeaths: '1905', dpm1: '3.515', dpm2: '3.696', dpm3: 'N/A', tis1: '08:21:51', tis2: '00:38:09', tis3: '00:00:00', totalTime: '09:00:00'},
 }
 
 const firstStats = {totalDeaths: 'baertaffy', dpm1: 'northernlion', dpm2: 'northernlion', dpm3: 'baertaffy', totalTime: 'baertaffy'}

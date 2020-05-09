@@ -27,7 +27,7 @@ const Levels = (): ReactElement => {
         {levelImg: Level7, levelCode: 'MWJ-17B-7MF', clearCheckVid: 'https://www.youtube.com/embed/M0PsXb0YvGA', clearRate: '0.40%', clearTime: '2HRS 47MIN', finished: true},
         {levelImg: Level8, levelCode: 'XHQ-4TB-NGG', clearCheckVid: 'https://www.youtube.com/embed/7Wuq1YRWIQ8', clearRate: '0.19%', clearTime: '7HRS 30MIN', finished: true},
         {levelImg: Level9, levelCode: '9SM-B1J-LFF', clearCheckVid: 'https://www.youtube.com/embed/b_NoliJrQac', clearRate: '0.13%', clearTime: '3HRS 50MIN', finished: true},
-        {levelImg: Level10, levelCode: '2DC-L45-KVG', clearCheckVid:'', clearRate: '0.28%', clearTime: '3HRS 20MIN', finished: false}
+        {levelImg: Level10, levelCode: '2DC-L45-KVG', clearCheckVid:'https://www.youtube.com/embed/KDs2FIDQxXc', clearRate: '0.28%', clearTime: '3HRS 20MIN', finished: false}
     ]
 
     var currentLevel = levels.find(it => it.levelCode === selectedLevel)

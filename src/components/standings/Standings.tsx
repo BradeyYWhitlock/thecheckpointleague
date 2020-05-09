@@ -4,17 +4,17 @@ import Stats from './Stats';
 import './styles/standings.scss'
 
 const competitors = [
-    {name: 'northernlion', record: '8-1', link:'https://twitter.com/NorthernlionLP'},
-    {name: 'baertaffy', record: '7-2', link:'https://twitter.com/BaerTaffy'},
-    {name: 'hcjustin', record: '6-3', link:'https://twitter.com/HCJustinn'},
-    {name: 'mathasgames', record: '3-6', link:'https://twitter.com/MathasGames'},
-    {name: 'jaaski', record: '3-6', link:'https://twitter.com/jaaski_'},
-    {name: 'dangheesling', record: '0-9', link:'https://twitter.com/DanGheesling'},
+    {name: 'baertaffy', record: '8-2', link:'https://twitter.com/BaerTaffy', bye: true},
+    {name: 'northernlion', record: '8-2', link:'https://twitter.com/NorthernlionLP', bye: true},
+    {name: 'hcjustin', record: '6-4', link:'https://twitter.com/HCJustinn', bye: false},
+    {name: 'mathasgames', record: '4-6', link:'https://twitter.com/MathasGames', bye: false},
+    {name: 'jaaski', record: '4-6', link:'https://twitter.com/jaaski_', bye: false},
+    {name: 'dangheesling', record: '0-10', link:'https://twitter.com/DanGheesling', bye: false},
 ]
 
 const Standings = (): ReactElement => {
 
-    const [selectedStats, setSelectedStats] = useState('northernlion')
+    const [selectedStats, setSelectedStats] = useState('baertaffy')
 
     const isMobile = window.innerWidth <= 500
 
@@ -27,8 +27,9 @@ const Standings = (): ReactElement => {
             {!isMobile ?
             <>
                 <div className='tclStandings'>
+                    <div className='playoffRanks'><div>X = Clinch Bye</div></div>
                     {competitors.map(competitor => {
-                        return <Competitor selectedStats={selectedStats} onClick={() => setSelectedStats(competitor.name)}link={competitor.link} record={competitor.record} name={competitor.name}/>
+                        return <Competitor selectedStats={selectedStats} onClick={() => setSelectedStats(competitor.name)} bye={competitor.bye} link={competitor.link} record={competitor.record} name={competitor.name}/>
                     })}
                 </div>
                 <Stats selectedStats={selectedStats}/>
@@ -36,8 +37,9 @@ const Standings = (): ReactElement => {
             <>
             {selectedStats === '' ?
                 <div className='tclStandings'>
+                    <div className='playoffRanks'><div>X = Clinch Bye</div></div>
                     {competitors.map(competitor => {
-                        return <Competitor selectedStats={selectedStats} onClick={() => setSelectedStats(competitor.name)}link={competitor.link} record={competitor.record} name={competitor.name}/>
+                        return <Competitor selectedStats={selectedStats} bye={competitor.bye} onClick={() => setSelectedStats(competitor.name)}link={competitor.link} record={competitor.record} name={competitor.name}/>
                     })}
                 </div> :
                 <>

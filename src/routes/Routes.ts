@@ -4,6 +4,7 @@ import Schedule from '../components/schedule/Schedule';
 import Standings from '../components/standings/Standings';
 import Archive from '../components/archive/Archive';
 import Levels from '../components/levels/Levels';
+import Playoffs from '../components/playoffs/Playoffs';
 
 export interface AppRoute {
   component: FC;
@@ -34,6 +35,11 @@ export default [
   {
     component: Levels,
     path: '/levels',
+    exact: true
+  },
+  {
+    component: Playoffs,
+    path: '/playoffs',
     exact: true
   }
 ] as AppRoute[];

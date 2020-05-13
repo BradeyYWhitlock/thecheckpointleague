@@ -1,0 +1,149 @@
+.playoffs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+
+    &PlayerCard {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        padding: 10px;
+        height: 40px;
+        background-color: #202437;
+        font-size: 40px;
+        transform: skewX(-15deg);
+        border: 1px solid #0B0D19;
+        text-shadow: 1px 1px 2px #0B0D19, 0 0 3px white, 0 0 5px #202437;
+    }
+
+    &Matchup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.nextRound {
+    position: absolute;
+    width: 50px;
+    text-align: center;
+    right: 15px;
+    top: 100px;
+    font-size: 20px;
+}
+
+.previousRound {
+    position: absolute;
+    width: 50px;
+    text-align: center;
+    left: 15px;
+    top: 100px;
+    font-size: 20px;
+}
+
+.lastRound {
+    justify-content: space-around;
+    height: 45vh;
+}
+
+.straightLine {
+    position: absolute;
+    width: 26px;
+    left: -46px;
+    border: 10px solid #3E4265;
+}
+
+.matchupLines {
+    position: absolute;
+    border: 10px solid #3E4265;
+    height: 150px;
+    width: 300px;
+    margin-left: 70px;
+    border-left: none;
+    transform: skewX(-15deg);
+}
+
+.roundHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.roundName {
+    font-size: 50px
+}
+
+.bestOf {
+    font-size: 25px
+}
+
+.rankingSeed {
+    font-size: 30px;
+    color: #3E4265;
+    text-shadow: none;
+}
+
+.reward {
+    &Trophy {
+        margin-top: 200px;
+        padding: 20px 0px;
+    }
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    background-color: rgba(32, 36, 55, 0.3);
+
+    &One {
+        height: 85vh;
+    }
+
+    &Two {
+        height: 80vh;
+    }
+
+    &Three {
+        height: 75vh;
+    }
+
+}
+
+.champion {
+    font-size: 40px;
+    margin-bottom: -40px;
+}
+
+.ranking {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0px 10px;
+    margin: -10px 0px 0px -10px;
+    color: #0B0D19;
+    text-shadow: none;
+    background-color: #F3B136;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+    .roundOne {
+        height: 80vh;
+    }
+
+    .roundTwo {
+        height: 80vh;
+    }
+
+    .roundThree {
+        height: 80vh;
+    }
+}

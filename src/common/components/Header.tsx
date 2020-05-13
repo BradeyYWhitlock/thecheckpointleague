@@ -32,13 +32,14 @@ const Header = (): ReactElement => {
                 <div className='sideMenu'>
                     <div className='seasonItem'>Season 1</div>
                     {isMobile &&
-                    <>
-                        <NavLink onClick={() => navClicked('home')} className={`mobileNavItem ${page === 'home' && 'mobileSelected'}`} to='/'>HOME</NavLink>
-                        <NavLink onClick={() => navClicked('schedule')} className={`mobileNavItem ${page === 'schedule' && 'mobileSelected'}`} to='/schedule'>SCHEDULE</NavLink>
-                        <NavLink onClick={() => navClicked('archive')} className={`mobileNavItem ${page === 'archive' && 'mobileSelected'}`} to='/archive'>ARCHIVE</NavLink>
-                        <NavLink onClick={() => navClicked('standings')} className={`mobileNavItem ${page === 'standings' && 'mobileSelected'}`} to='/standings'>STANDINGS</NavLink>
-                        <NavLink onClick={() => navClicked('levels')} className={`mobileNavItem ${page === 'levels' && 'mobileSelected'}`} to='/levels'>Levels</NavLink>
-                    </>
+                        <>
+                            <NavLink onClick={() => navClicked('home')} className={`mobileNavItem ${page === 'home' && 'mobileSelected'}`} to='/'>HOME</NavLink>
+                            <NavLink onClick={() => navClicked('schedule')} className={`mobileNavItem ${page === 'schedule' && 'mobileSelected'}`} to='/schedule'>SCHEDULE</NavLink>
+                            <NavLink onClick={() => navClicked('archive')} className={`mobileNavItem ${page === 'archive' && 'mobileSelected'}`} to='/archive'>ARCHIVE</NavLink>
+                            <NavLink onClick={() => navClicked('standings')} className={`mobileNavItem ${page === 'standings' && 'mobileSelected'}`} to='/standings'>STANDINGS</NavLink>
+                            <NavLink onClick={() => navClicked('levels')} className={`mobileNavItem ${page === 'levels' && 'mobileSelected'}`} to='/levels'>Levels</NavLink>
+                            <NavLink onClick={() => navClicked('playoffs')} className={`mobileNavItem ${page === 'playoffs' && 'mobileSelected'}`} to='/playoffs'>Playoffs</NavLink>
+                        </>
                     }
                 </div>
                 <a target="_blank" href='https://github.com/BradeyYWhitlock/thecheckpointleague' className='githubLink'>
@@ -46,13 +47,13 @@ const Header = (): ReactElement => {
                 </a>
             </Drawer>
             {!isMobile &&
-            <>
-                <NavLink onClick={() => navClicked('home')} className={`navItem ${page === 'home' && 'selected'}`} to='/'>HOME</NavLink>
-                <NavLink onClick={() => navClicked('schedule')} className={`navItem ${page === 'schedule' && 'selected'}`} to='/schedule'>SCHEDULE</NavLink>
-                <NavLink onClick={() => navClicked('archive')} className={`navItem ${page === 'archive' && 'selected'}`} to='/archive'>ARCHIVE</NavLink>
-                <NavLink onClick={() => navClicked('standings')} className={`navItem ${page === 'standings' && 'selected'}`} to='/standings'>STANDINGS</NavLink>
-                <NavLink onClick={() => navClicked('levels')} className={`navItem ${page === 'levels' && 'selected'}`} to='/levels'>Levels</NavLink>
-            </>}
+                <>
+                    <NavLink onClick={() => navClicked('home')} className={`navItem ${page === 'home' && 'selected'}`} to='/'>HOME</NavLink>
+                    <NavLink onClick={() => navClicked('schedule')} className={`navItem ${page === 'schedule' && 'selected'}`} to='/schedule'>SCHEDULE</NavLink>
+                    <NavLink onClick={() => navClicked('archive')} className={`navItem ${page === 'archive' && 'selected'}`} to='/archive'>ARCHIVE</NavLink>
+                    <NavLink onClick={() => navClicked('standings')} className={`navItem ${page === 'standings' && 'selected'}`} to='/standings'>STANDINGS</NavLink>
+                    <NavLink onClick={() => navClicked('levels')} className={`navItem ${page === 'levels' && 'selected'}`} to='/levels'>Levels</NavLink>
+                </>}
         </div>
     )
 }

@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react';
-import './styles/archive.scss'
+import { useSelector } from 'react-redux';
+import { getIsMobile } from '../../state/selectors/app';
+import './styles/archive.scss';
 
 interface HeaderProps {
     videos: any[]
 }
 
 const Header = (props: HeaderProps): ReactElement => {
-
-    const isMobile = window.innerWidth <= 500
+    const isMobile = useSelector(getIsMobile)
 
     return (
         <div className='weekVideos'>

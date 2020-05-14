@@ -1,4 +1,7 @@
 import React, { ReactElement, useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { getIsMobile } from '../../state/selectors/app';
+
 import { NavLink } from 'react-router-dom'
 import Competitor from './Competitor';
 import Stats from './Stats';
@@ -17,7 +20,7 @@ const Standings = (): ReactElement => {
 
     const [selectedStats, setSelectedStats] = useState('baertaffy')
 
-    const isMobile = window.innerWidth <= 500
+    const isMobile = useSelector(getIsMobile)
 
     useEffect(() => {
         isMobile && setSelectedStats('')
@@ -25,9 +28,9 @@ const Standings = (): ReactElement => {
 
     return (
         <>
-            <div className='playoffButton'>
+            {!isMobile && <div className='playoffButton'>
                 <NavLink to='playoffs' className='liveButton'>See Playoffs here</NavLink>
-            </div>
+            </div>}
             <div className='standings'>
                 {!isMobile ?
                     <>

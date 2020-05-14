@@ -1,4 +1,6 @@
 import React, { ReactElement, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { getIsMobile } from '../../state/selectors/app';
 import './styles/playoffs.scss'
 
 import VSFlag from '../../assets/images/vsFlag.png'
@@ -6,7 +8,7 @@ import Reward from '../../assets/images/reward.png'
 
 
 const Playoffs = (): ReactElement => {
-    const isMobile = window.innerWidth <= 500
+    const isMobile = useSelector(getIsMobile)
 
     const [round, setRound] = useState(1)
 

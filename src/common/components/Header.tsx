@@ -1,19 +1,24 @@
 import React, { ReactElement, useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+import * as AppActions from '../../state/actions/app';
+import { getIsMobile } from '../../state/selectors/app';
 import '../styles/main.scss'
 import { NavLink } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 
 const Header = (): ReactElement => {
-
+    const dispatch = useDispatch()
+    const isMobile = useSelector(getIsMobile)
 
     var location = window.location.pathname.substring(1)
     location = location === '' ? 'home' : location
     const [page, setPage] = useState(location)
     const [sideMenu, setSideMenu] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 500)
 
     const windowResized = () => {
-        setIsMobile(window.innerWidth <= 500)
+        var isMobileCheck = window.innerWidth <= 500
+        console.log('here');
+        dispatch(AppActions.setIsMobile(isMobileCheck))
     }
 
     useEffect(() => {

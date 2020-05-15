@@ -17,18 +17,18 @@ import VSFlag from '../../assets/images/vsFlag.png'
 import Reward from '../../assets/images/reward.png'
 
 const matchups = [
-    { round: '1', match: '1', player1: 'hcjustin', player2: 'dangheesling', levels: [Level_3_6, Level_3_2, Level_3_3], bans: [Level_3_5, Level_3_8] },
-    { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9] },
-    { round: '2', match: '1', player1: '', player2: '', levels: [], bans: [] },
-    { round: '2', match: '2', player1: '', player2: '', levels: [], bans: [] },
-    { round: 'finalround', match: '', player1: '', player2: '', levels: [], bans: [] },
+    { round: '1', match: '1', player1: 'hcjustin', player2: 'dangheesling', levels: [Level_3_6, Level_3_2, Level_3_3], bans: [Level_3_5, Level_3_8], standings: ['hcjustin', 'hcjustin', 'N/A'], winner: 'hcjustin' },
+    { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9], standings: ['', '', ''], winner: '' },
+    { round: '2', match: '1', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
+    { round: '2', match: '2', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
+    { round: 'finalround', match: '', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
 ]
 
 const Playoffs = (): ReactElement => {
     const isMobile = useSelector(getIsMobile)
 
     const [round, setRound] = useState(1)
-    const [matchup, setMatchup] = useState(-1)
+    const [matchup, setMatchup] = useState(0)
 
 
     return (

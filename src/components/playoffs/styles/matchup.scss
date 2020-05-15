@@ -103,6 +103,36 @@
     text-align: center;
 }
 
+.victory {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(15deg);
+    text-align: center;
+    width: 350px;
+    height: 280px;
+    top: 31px;
+    background-color: rgba(243, 176, 53, 0.5);
+    font-size: 60px;
+    text-shadow: 1px 1px 2px #0B0D19, 0 0 3px white, 0 0 20px #202437;
+}
+
+.notNeeded {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(15deg);
+    text-align: center;
+    width: 350px;
+    height: 280px;
+    top: 31px;
+    background-color: rgba(208, 205, 206, 0.5);
+    font-size: 60px;
+    text-shadow: 1px 1px 2px #0B0D19, 0 0 3px white, 0 0 20px #202437;
+}
+
 
 @media only screen and (max-width: 500px) {
 
@@ -132,6 +162,7 @@
     }
 
     .imageAndLevelNumber {
+        position: relative;
         margin-bottom: 30px;
     }
 
@@ -151,7 +182,7 @@
         top: 50px;
         left: 90px;
         font-size: 30px;
-    
+
         &:hover {
             color:#F3B136;
             cursor: pointer;
@@ -160,6 +191,15 @@
 
     .banBorder {
         margin-bottom: 20px;
+    }
+
+    .victory {
+            top: 0px;
+            transform: skewX(0deg);
+            text-align: center;
+            width: 230px;
+            height: 180px;
+            font-size: 40px;
     }
 
 }

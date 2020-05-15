@@ -17,7 +17,6 @@ const Header = (): ReactElement => {
 
     const windowResized = () => {
         var isMobileCheck = window.innerWidth <= 500
-        console.log('here');
         dispatch(AppActions.setIsMobile(isMobileCheck))
     }
 

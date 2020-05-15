@@ -75,6 +75,40 @@ body {
     color: white;
 }
 
+.sourceCode {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    color: #0B0D19;
+    font-size: 20px;
+    background-color: #F3B136;
+}
+
+.contactCreator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #0B0D19;
+    font-size: 20px;
+    background-color: #F3B136;
+    padding: 0px 10px;
+    padding-bottom: 5px;
+}
+
+.creatorLink {
+    color: #202437;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F3B136;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+}
+
 .githubLink {
     bottom: 10px;
     right: 20px;
@@ -101,8 +135,4 @@ body {
             color: #F3B136;
         }
     }
-
-    .githubLink {
-        display: none;
-    }
-  }
+}

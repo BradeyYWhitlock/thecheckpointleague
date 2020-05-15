@@ -7,8 +7,10 @@ import Matchup from './components/Matchup';
 
 import Level_3_2 from '../../assets/images/level5.png'
 import Level_3_3 from '../../assets/images/level6.png'
+import Level_3_4 from '../../assets/images/level3.png'
 import Level_3_5 from '../../assets/images/level1.png'
 import Level_3_6 from '../../assets/images/level7.png'
+import Level_3_7 from '../../assets/images/level4.png'
 import Level_3_8 from '../../assets/images/level2.png'
 import Level_3_9 from '../../assets/images/level8.png'
 import Level_3_10 from '../../assets/images/level10.png'
@@ -17,10 +19,19 @@ import VSFlag from '../../assets/images/vsFlag.png'
 import Reward from '../../assets/images/reward.png'
 
 const matchups = [
-    { round: '1', match: '1', player1: 'hcjustin', player2: 'dangheesling', levels: [Level_3_6, Level_3_2, Level_3_3], bans: [Level_3_5, Level_3_8], standings: ['hcjustin', 'hcjustin', 'N/A'], winner: 'hcjustin' },
+    {
+        round: '1',
+        match: '1',
+        player1: 'hcjustin',
+        player2: 'dangheesling',
+        levels: [Level_3_6, Level_3_2, Level_3_3],
+        bans: [Level_3_5, Level_3_8],
+        standings: ['hcjustin', 'hcjustin', 'N/A'],
+        winner: 'hcjustin'
+    },
     { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9], standings: ['jaaski', 'jaaski', 'N/A'], winner: 'jaaski' },
-    { round: '2', match: '1', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
-    { round: '2', match: '2', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
+    { round: '2', match: '1', player1: 'baertaffy', player2: 'jaaski', levels: [Level_3_5, Level_3_9, Level_3_4], bans: [Level_3_7, Level_3_8], standings: ['', '', ''], winner: '' },
+    { round: '2', match: '2', player1: 'northernlion', player2: 'hcjustin', levels: [Level_3_9, Level_3_8, Level_3_3], bans: [Level_3_2, Level_3_6], standings: ['', '', ''], winner: '' },
     { round: 'finalround', match: '', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
 ]
 

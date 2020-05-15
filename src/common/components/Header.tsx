@@ -46,9 +46,18 @@ const Header = (): ReactElement => {
                         </>
                     }
                 </div>
-                <a target="_blank" href='https://github.com/BradeyYWhitlock/thecheckpointleague' className='githubLink'>
-                    <i className="fab fa-github"></i>
-                </a>
+                <div className='contactCreator'>
+                    <div>Contact creator</div>
+                    <a className='githubLink' target="_blank" href='https://twitter.com/Bradeyyw'>
+                        <i className="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <div className='sourceCode'>
+                    <div>Source Code at</div>
+                    <a target="_blank" href='https://github.com/BradeyYWhitlock/thecheckpointleague' className='githubLink'>
+                        <i className="fab fa-github"></i>
+                    </a>
+                </div>
             </Drawer>
             {!isMobile &&
                 <>

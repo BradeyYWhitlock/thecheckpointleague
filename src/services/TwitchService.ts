@@ -2,8 +2,6 @@ import axios from 'axios'
 import * as Config from '../config';
 import moment from 'moment';
 
-
-//DEPRICATED AS OF APRIL 30TH
 export const isTclLive = async (): Promise<boolean> => {
     var tclLive = await axios.get(`https://api.twitch.tv/helix/streams?user_login=dumbdog`,
         {

@@ -1,0 +1,165 @@
+.matchupPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.roundAndMatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.playerVsPlayer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 60px;
+    flex-direction: row;
+    width: 50%;
+}
+
+.matchupPlayerCard {
+    border: 3px solid #F3B136;
+    transform: skewX(-15deg);
+    padding: 10px 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.mapsForMatchup {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0px;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    margin-top: 50px;
+    border: 3px solid #F3B136;
+    transform: skewX(-15deg);
+}
+
+.bansForMatchup {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+}
+
+.bansHeader {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.levelImage {
+    transform: skewX(15deg);
+    min-width: 350px;
+}
+
+.banImage {
+    height: auto;
+    max-width: 200px;
+}
+
+.banBorder {
+    border: 3px solid #DB4870;
+    padding: 5px 20px;
+}
+
+.levelNumber {
+    position: absolute;
+    margin: -30px 0px 0px 10px;
+    font-size: 40px;
+    background-color: #0B0D19;
+    border: 3px solid #F3B136;
+    padding: 0px 15px;
+}
+
+.backToPlayoffs {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    font-size: 30px;
+
+    &:hover {
+        color:#F3B136;
+        cursor: pointer;
+    }
+}
+
+.comingSoon {
+    font-size: 60px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .matchupPage {
+        margin-top: 100px;
+    }
+
+    .playerVsPlayer {
+        font-size: 40px;
+        flex-direction: column;
+    }
+
+    .matchupPlayerCard {
+        width: 250px;
+    }
+
+    .mapsForMatchup {
+        margin-top: 20px;
+        flex-direction: column;
+        transform: skewX(0deg);
+        width: 80%;
+    }
+
+    .levelImage {
+        transform: skewX(0deg);
+        min-width: 0;
+    }
+
+    .imageAndLevelNumber {
+        margin-bottom: 30px;
+    }
+
+    .levelNumber {
+        margin: -25px 0px 0px -20px;
+        font-size: 30px;
+    }
+
+    .bansForMatchup {
+        flex-direction: column;
+        transform: skewX(0deg);
+        width: 80%;
+    }
+
+    .backToPlayoffs {
+        position: absolute;
+        top: 50px;
+        left: 90px;
+        font-size: 30px;
+    
+        &:hover {
+            color:#F3B136;
+            cursor: pointer;
+        }
+    }
+
+    .banBorder {
+        margin-bottom: 20px;
+    }
+
+}

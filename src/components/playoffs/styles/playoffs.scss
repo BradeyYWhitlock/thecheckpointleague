@@ -30,6 +30,10 @@
     }
 }
 
+.winInPlayoffBraket {
+    background-color: #F3B136;
+}
+
 .nextRound {
     position: absolute;
     width: 50px;
@@ -135,6 +139,7 @@
     text-shadow: none;
     background-color: #F3B136;
     font-size: 30px;
+    border: 1px solid #0B0D19;
 }
 
 @media only screen and (max-width: 500px) {

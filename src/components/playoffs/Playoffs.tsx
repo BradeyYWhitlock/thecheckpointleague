@@ -18,7 +18,7 @@ import Reward from '../../assets/images/reward.png'
 
 const matchups = [
     { round: '1', match: '1', player1: 'hcjustin', player2: 'dangheesling', levels: [Level_3_6, Level_3_2, Level_3_3], bans: [Level_3_5, Level_3_8], standings: ['hcjustin', 'hcjustin', 'N/A'], winner: 'hcjustin' },
-    { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9], standings: ['', '', ''], winner: '' },
+    { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9], standings: ['jaaski', 'jaaski', 'N/A'], winner: 'jaaski' },
     { round: '2', match: '1', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
     { round: '2', match: '2', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
     { round: 'finalround', match: '', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
@@ -28,7 +28,7 @@ const Playoffs = (): ReactElement => {
     const isMobile = useSelector(getIsMobile)
 
     const [round, setRound] = useState(1)
-    const [matchup, setMatchup] = useState(0)
+    const [matchup, setMatchup] = useState(-1)
 
 
     return (
@@ -45,7 +45,7 @@ const Playoffs = (): ReactElement => {
                             <div className='bestOf'>Best of 3</div>
                         </div>
                         <div onClick={() => setMatchup(0)} className='playoffsMatchup'>
-                            <div className='playoffsPlayerCard'>
+                            <div className='playoffsPlayerCard winInPlayoffBraket'>
                                 <div className='ranking'>3</div>
                                 <div>HCJUSTIN</div>
                             </div>
@@ -61,7 +61,7 @@ const Playoffs = (): ReactElement => {
                                 <div>mathasgames</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
-                            <div className='playoffsPlayerCard'>
+                            <div className='playoffsPlayerCard winInPlayoffBraket'>
                                 <div className='ranking'>5</div>
                                 <div>jaaski</div>
                             </div>
@@ -73,8 +73,9 @@ const Playoffs = (): ReactElement => {
                             <div className='bestOf'>Best of 3</div>
                         </div>
                         <div onClick={() => setMatchup(2)} className='playoffsMatchup'>
-                            <div className='playoffsPlayerCard rankingSeed'>
-                                <div>lowest remaining seed</div>
+                            <div className='playoffsPlayerCard'>
+                                <div className='ranking'>5</div>
+                                <div>jaaski</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
                             <div className='playoffsPlayerCard'>
@@ -88,8 +89,9 @@ const Playoffs = (): ReactElement => {
                                 <div>northernlion</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
-                            <div className='playoffsPlayerCard rankingSeed'>
-                                <div>highest remaining seed</div>
+                            <div className='playoffsPlayerCard'>
+                                <div className='ranking'>3</div>
+                                <div>hcjustin</div>
                             </div>
                         </div>
                     </div>}

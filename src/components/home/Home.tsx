@@ -10,8 +10,11 @@ const Home = (): ReactElement => {
     var friday = 5;
     const now = new Date()
 
-    if (now.getDay() === 5 && now.getHours() > 14) {
+    if (now.getDay() >= 5) {
         friday = 5 + 7
+        if (now.getDay() === 5 && now.getHours() > 14) {
+            friday = 5
+        }
     }
     const isMobile = useSelector(getIsMobile)
 

@@ -15,7 +15,7 @@ class App extends Component<RouteComponentProps> {
 
         return (
             <div className="appContentContainer">
-                <Header/>
+                <Header />
                 <Switch>
                     {Routes.map(
                         (routeObj: AppRoute): ReactNode => {

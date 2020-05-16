@@ -38,6 +38,10 @@ module.exports = env => {
           test: /\.mp4$/,
           loader: 'file-loader?name=videos/[name].[ext]',
         },
+        {
+          test: /\.(gif|ogg|mp3|wav|mpe?g)$/i,
+          use: 'file-loader'
+        },
       ]
     },
     plugins: [htmlWebpackPlugin],

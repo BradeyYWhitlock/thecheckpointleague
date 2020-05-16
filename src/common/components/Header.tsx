@@ -2,13 +2,16 @@ import React, { ReactElement, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import * as AppActions from '../../state/actions/app';
 import { getIsMobile } from '../../state/selectors/app';
+import Konami from 'konami'
 import '../styles/main.scss'
 import { NavLink } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
+var NewTech = require('../../assets/sounds/newTech.mp3')
 
 const Header = (): ReactElement => {
     const dispatch = useDispatch()
     const isMobile = useSelector(getIsMobile)
+    const NewTechAudio = new Audio(NewTech);
 
     var location = window.location.pathname.substring(1)
     location = location === '' ? 'home' : location
@@ -23,6 +26,11 @@ const Header = (): ReactElement => {
     useEffect(() => {
         window.addEventListener("resize", windowResized);
     }, [])
+
+    const easterEgg = new Konami(() => {
+        console.log('do konami code');
+        NewTechAudio.play()
+    })
 
     const navClicked = (page: string) => {
         setSideMenu(false)

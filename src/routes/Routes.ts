@@ -5,6 +5,7 @@ import Standings from '../components/standings/Standings';
 import Archive from '../components/archive/Archive';
 import Levels from '../components/levels/Levels';
 import Playoffs from '../components/playoffs/Playoffs';
+import Faq from '../components/faq/Faq';
 
 export interface AppRoute {
   component: FC;
@@ -40,6 +41,11 @@ export default [
   {
     component: Playoffs,
     path: '/playoffs',
+    exact: true
+  },
+  {
+    component: Faq,
+    path: '/faq',
     exact: true
   }
 ] as AppRoute[];

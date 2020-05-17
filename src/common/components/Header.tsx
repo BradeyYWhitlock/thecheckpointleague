@@ -40,6 +40,7 @@ const Header = (): ReactElement => {
     return (
         <div className='header'>
             <div className='slideOverButton' onClick={() => setSideMenu(true)}><i className="fas fa-bars"></i></div>
+            <NavLink onClick={() => navClicked('faq')} className={`faqHeaderButton ${page === 'faq' && 'selected'}`} to='/faq'><i className="far fa-question-circle"></i></NavLink>
             <Drawer open={sideMenu} onClose={() => setSideMenu(false)}>
                 <div className='sideMenu'>
                     <div className='seasonItem'>Season 1</div>
@@ -51,6 +52,7 @@ const Header = (): ReactElement => {
                             <NavLink onClick={() => navClicked('standings')} className={`mobileNavItem ${page === 'standings' && 'mobileSelected'}`} to='/standings'>STANDINGS</NavLink>
                             <NavLink onClick={() => navClicked('levels')} className={`mobileNavItem ${page === 'levels' && 'mobileSelected'}`} to='/levels'>Levels</NavLink>
                             <NavLink onClick={() => navClicked('playoffs')} className={`mobileNavItem ${page === 'playoffs' && 'mobileSelected'}`} to='/playoffs'>Playoffs</NavLink>
+                            <NavLink onClick={() => navClicked('faq')} className={`mobileNavItem ${page === 'faq' && 'mobileSelected'}`} to='/faq'>Faq</NavLink>
                         </>
                     }
                 </div>

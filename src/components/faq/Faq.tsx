@@ -17,12 +17,14 @@ const Faq = (): ReactElement => {
 
     return (
         <div className='faq'>
-            {faqItems.map(faq => (
-                <div className='faqItem'>
-                    <div className='faqQuestion'>{faq.question}</div>
-                    <div className='faqAnswer'>{faq.answer}</div>
-                </div>
-            ))}
+            <div className='faqCards'>
+                {faqItems.map(faq => (
+                    <div className='faqItem'>
+                        <div className='faqQuestion'>{faq.question}</div>
+                        <div className='faqAnswer'>{faq.answer}</div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

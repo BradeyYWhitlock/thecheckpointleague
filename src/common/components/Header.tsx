@@ -11,7 +11,7 @@ var NewTech = require('../../assets/sounds/newTech.mp3')
 const Header = (): ReactElement => {
     const dispatch = useDispatch()
     const isMobile = useSelector(getIsMobile)
-    const NewTechAudio = new Audio(NewTech);
+    var NewTechAudio: HTMLAudioElement = null
 
     var location = window.location.pathname.substring(1)
     location = location === '' ? 'home' : location
@@ -25,10 +25,10 @@ const Header = (): ReactElement => {
 
     useEffect(() => {
         window.addEventListener("resize", windowResized);
+        NewTechAudio = new Audio(NewTech);
     }, [])
 
     const easterEgg = new Konami(() => {
-        console.log('do konami code');
         NewTechAudio.play()
     })
 

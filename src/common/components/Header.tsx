@@ -40,7 +40,7 @@ const Header = (): ReactElement => {
     return (
         <div className='header'>
             <div className='slideOverButton' onClick={() => setSideMenu(true)}><i className="fas fa-bars"></i></div>
-            <NavLink onClick={() => navClicked('faq')} className={`faqHeaderButton ${page === 'faq' && 'selected'}`} to='/faq'><i className="far fa-question-circle"></i></NavLink>
+            {!isMobile && <NavLink onClick={() => navClicked('faq')} className={`faqHeaderButton ${page === 'faq' && 'selected'}`} to='/faq'><i className="far fa-question-circle"></i></NavLink>}
             <Drawer open={sideMenu} onClose={() => setSideMenu(false)}>
                 <div className='sideMenu'>
                     <div className='seasonItem'>Season 1</div>

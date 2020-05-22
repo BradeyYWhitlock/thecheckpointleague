@@ -12,7 +12,7 @@ const Home = (): ReactElement => {
 
     if (now.getDay() >= 5) {
         friday = 5 + 7
-        if (now.getDay() === 5 && now.getHours() > 14) {
+        if (now.getDay() === 5 && now.getHours() < 14) {
             friday = 5
         }
     }

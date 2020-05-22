@@ -30,8 +30,8 @@ const matchups = [
         winner: 'hcjustin'
     },
     { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9], standings: ['jaaski', 'jaaski', 'N/A'], winner: 'jaaski' },
-    { round: '2', match: '1', player1: 'baertaffy', player2: 'jaaski', levels: [Level_3_5, Level_3_9, Level_3_4], bans: [Level_3_7, Level_3_8], standings: ['', '', ''], winner: '' },
-    { round: '2', match: '2', player1: 'northernlion', player2: 'hcjustin', levels: [Level_3_9, Level_3_8, Level_3_3], bans: [Level_3_2, Level_3_6], standings: ['', '', ''], winner: '' },
+    { round: '2', match: '1', player1: 'baertaffy', player2: 'jaaski', levels: [Level_3_5, Level_3_9, Level_3_4], bans: [Level_3_7, Level_3_8], standings: ['baertaffy', 'jaaski', 'baertaffy'], winner: 'baertaffy' },
+    { round: '2', match: '2', player1: 'northernlion', player2: 'hcjustin', levels: [Level_3_9, Level_3_8, Level_3_3], bans: [Level_3_2, Level_3_6], standings: ['northernlion', 'hcjustin', 'hcjustin'], winner: 'hcjustin' },
     { round: 'finalround', match: '', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
 ]
 
@@ -89,7 +89,7 @@ const Playoffs = (): ReactElement => {
                                 <div>jaaski</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
-                            <div className='playoffsPlayerCard'>
+                            <div className='playoffsPlayerCard winInPlayoffBraket'>
                                 <div className='ranking'>1</div>
                                 <div>baertaffy</div>
                             </div>
@@ -100,7 +100,7 @@ const Playoffs = (): ReactElement => {
                                 <div>northernlion</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
-                            <div className='playoffsPlayerCard'>
+                            <div className='playoffsPlayerCard winInPlayoffBraket'>
                                 <div className='ranking'>3</div>
                                 <div>hcjustin</div>
                             </div>
@@ -112,12 +112,14 @@ const Playoffs = (): ReactElement => {
                             <div className='bestOf'>Best of 5</div>
                         </div>
                         <div onClick={() => setMatchup(4)} className='playoffsMatchup lastRound'>
-                            <div className='playoffsPlayerCard rankingSeed'>
-                                <div>Winner from round 2</div>
+                            <div className='playoffsPlayerCard'>
+                                <div className='ranking'>1</div>
+                                <div>baertaffy</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
-                            <div className='playoffsPlayerCard rankingSeed'>
-                                <div>Winner from round 2</div>
+                            <div className='playoffsPlayerCard'>
+                            <div className='ranking'>3</div>
+                                <div>hcjustin</div>
                             </div>
                         </div>
                     </div>}

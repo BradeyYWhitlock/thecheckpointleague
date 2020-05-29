@@ -21,10 +21,8 @@ interface MatchupProps {
 
 const Matchup = (props: MatchupProps): ReactElement => {
 
-    // const isWinner = () => {
-    //     props.matchup.player1 === props.matchup.winner ?
-    // }
-
+    const victory = props.matchup.round === 'finalround' ? 'victoryFinals' : 'victory'
+    const notNeeded = props.matchup.round === 'finalround' ? 'notNeededFinals' : 'notNeeded'
 
     return (
         <div className='matchupPage'>
@@ -38,8 +36,8 @@ const Matchup = (props: MatchupProps): ReactElement => {
                 <div className='mapsForMatchup'>
                     {props.matchup.levels.map((level, index) => (
                         <div className='imageAndLevelNumber'>
-                            <img className='levelImage' src={level} />
-                            {props.matchup.standings[index] !== '' && <div className={`${props.matchup.standings[index] === 'N/A' ? 'notNeeded' : 'victory'}`}>{props.matchup.standings[index]}</div>}
+                            <img className={`${props.matchup.round === 'finalround' ? 'levelImageFinals' : 'levelImage'}`} src={level} />
+                            {props.matchup.standings[index] !== '' && <div className={`${props.matchup.standings[index] === 'N/A' ? notNeeded : victory}`}>{props.matchup.standings[index]}</div>}
                             <div className='levelNumber'>{index + 1}</div>
                         </div>
                     ))}

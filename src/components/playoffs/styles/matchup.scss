@@ -50,7 +50,7 @@
     padding: 10px 0px;
     align-items: center;
     flex-direction: row;
-    width: 30%;
+    width: 45%;
 }
 
 .bansHeader {
@@ -61,6 +61,11 @@
 .levelImage {
     transform: skewX(15deg);
     min-width: 350px;
+}
+
+.levelImageFinals {
+    transform: skewX(15deg);
+    min-width: 200px;
 }
 
 .banImage {
@@ -118,6 +123,21 @@
     text-shadow: 1px 1px 2px #0B0D19, 0 0 3px white, 0 0 20px #202437;
 }
 
+.victoryFinals {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(15deg);
+    text-align: center;
+    width: 230px;
+    height: 180px;
+    top: 31px;
+    background-color: rgba(243, 176, 53, 0.5);
+    font-size: 60px;
+    text-shadow: 1px 1px 2px #0B0D19, 0 0 3px white, 0 0 20px #202437;
+}
+
 .notNeeded {
     position: absolute;
     display: flex;
@@ -127,6 +147,21 @@
     text-align: center;
     width: 350px;
     height: 280px;
+    top: 31px;
+    background-color: rgba(208, 205, 206, 0.5);
+    font-size: 60px;
+    text-shadow: 1px 1px 2px #0B0D19, 0 0 3px white, 0 0 20px #202437;
+}
+
+.notNeededFinals {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewX(15deg);
+    text-align: center;
+    width: 230px;
+    height: 180px;
     top: 31px;
     background-color: rgba(208, 205, 206, 0.5);
     font-size: 60px;
@@ -157,6 +192,11 @@
     }
 
     .levelImage {
+        transform: skewX(0deg);
+        min-width: 0;
+    }
+
+    .levelImageFinals {
         transform: skewX(0deg);
         min-width: 0;
     }

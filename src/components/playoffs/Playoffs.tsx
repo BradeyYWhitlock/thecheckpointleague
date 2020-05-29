@@ -5,6 +5,7 @@ import './styles/playoffs.scss'
 
 import Matchup from './components/Matchup';
 
+import Level_3_1 from '../../assets/images/level4.png'
 import Level_3_2 from '../../assets/images/level5.png'
 import Level_3_3 from '../../assets/images/level6.png'
 import Level_3_4 from '../../assets/images/level3.png'
@@ -32,7 +33,7 @@ const matchups = [
     { round: '1', match: '2', player1: 'mathasgames', player2: 'jaaski', levels: [Level_3_6, Level_3_8, Level_3_10], bans: [Level_3_2, Level_3_9], standings: ['jaaski', 'jaaski', 'N/A'], winner: 'jaaski' },
     { round: '2', match: '1', player1: 'baertaffy', player2: 'jaaski', levels: [Level_3_5, Level_3_9, Level_3_4], bans: [Level_3_7, Level_3_8], standings: ['baertaffy', 'jaaski', 'baertaffy'], winner: 'baertaffy' },
     { round: '2', match: '2', player1: 'northernlion', player2: 'hcjustin', levels: [Level_3_9, Level_3_8, Level_3_3], bans: [Level_3_2, Level_3_6], standings: ['northernlion', 'hcjustin', 'hcjustin'], winner: 'hcjustin' },
-    { round: 'finalround', match: '', player1: '', player2: '', levels: [], bans: [], standings: ['', '', ''], winner: '' },
+    { round: 'finalround', match: '', player1: 'baertaffy', player2: 'hcjustin', levels: [Level_3_2, Level_3_3, Level_3_4, Level_3_9, Level_3_1], bans: [Level_3_5, Level_3_8, Level_3_10], standings: ['baertaffy', 'baertaffy', 'baertaffy', 'N/A', 'N/A'], winner: 'baertaffy' },
 ]
 
 const Playoffs = (): ReactElement => {
@@ -112,13 +113,13 @@ const Playoffs = (): ReactElement => {
                             <div className='bestOf'>Best of 5</div>
                         </div>
                         <div onClick={() => setMatchup(4)} className='playoffsMatchup lastRound'>
-                            <div className='playoffsPlayerCard'>
+                            <div className='playoffsPlayerCard winInPlayoffBraket'>
                                 <div className='ranking'>1</div>
                                 <div>baertaffy</div>
                             </div>
                             <img style={{ padding: '20px 0px' }} src={VSFlag} />
                             <div className='playoffsPlayerCard'>
-                            <div className='ranking'>3</div>
+                                <div className='ranking'>3</div>
                                 <div>hcjustin</div>
                             </div>
                         </div>
@@ -126,8 +127,8 @@ const Playoffs = (): ReactElement => {
                     {((isMobile && round === 4) || !isMobile) &&
                         <div className='round roundThree'>
                             <img className='rewardTrophy' src={Reward} />
-                            <div className='champion'>Champion</div>
-                            <div className='playoffsPlayerCard rankingSeed'>Overall Winner</div>
+                            <div className='champion'>Baertaffy</div>
+                            <div className='playoffsPlayerCard'>Overall Winner</div>
                         </div>}
                 </div>}
         </>

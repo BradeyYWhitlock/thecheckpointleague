@@ -38,9 +38,9 @@ const Home = (): ReactElement => {
             <div className='homeLogo'>
                 <img src={TCLLogo} width={515} height={217} />
             </div>
-            {!tclLive ?
+            {/* {!tclLive ?
                 <div className='nextStream'>Next Stream: {duration.days()} Days • {duration.hours()} Hours • {duration.minutes()} Mins</div>
-                : <a target='_blank' href='https://www.twitch.tv/dumbdog' className='liveButton'>Currently Live!</a>}
+                : <a target='_blank' href='https://www.twitch.tv/dumbdog' className='liveButton'>Currently Live!</a>} */}
             <iframe className='trailerVideo' width={isMobile ? "360" : "1120"} height={isMobile ? "200" : "630"} src='https://www.youtube.com/embed/CChwLKLT-dA' ></iframe>
         </div>
     )

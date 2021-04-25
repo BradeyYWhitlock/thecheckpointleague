@@ -58,6 +58,7 @@ const Standings = (): ReactElement => {
                     </>
                 }
             </div>
+            {(!isMobile || (isMobile && selectedStats !== '')) && <div style={{position: 'absolute', right: 0, bottom: 0, margin: '10px', fontSize: '20px'}}>* Full stats not shown</div>}
         </>
     )
 }

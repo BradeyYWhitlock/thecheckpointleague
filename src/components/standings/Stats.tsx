@@ -27,34 +27,34 @@ const Stats = (props: StatsProps): ReactElement => {
 
     return (
         <div className='standingsStats'>
-                <div className='totalStatsHeader'>{props.selectedStats} Overall Stats</div>
+                <div className='totalStatsHeader'>{props.selectedStats} Overall Stats*</div>
                 <div className='statItem'>
                     <div className='statLabel'>Total Deaths <i style={{color: 'white'}} className="fas fa-skull skull"></i></div>
                     <div className='statValue'>{totalStats[props.selectedStats].totalDeaths || ''}</div>
-                    {firstStats.totalDeaths === props.selectedStats && <div className='firstBadge'>1</div>}
+                    {/* {firstStats.totalDeaths === props.selectedStats && <div className='firstBadge'>1</div>}
                     {secondStats.totalDeaths === props.selectedStats && <div className='secondBadge'>2</div>}
-                    {thirdStats.totalDeaths === props.selectedStats && <div className='thirdBadge'>3</div>}
+                    {thirdStats.totalDeaths === props.selectedStats && <div className='thirdBadge'>3</div>} */}
                 </div>
                 <div className='statItem'>
                     <div className='statLabel'>DPM <img src={DPM1} height={40}/></div>
                     <div className='statValue'>{totalStats[props.selectedStats].dpm1 || ''}</div>
-                    {firstStats.dpm1 === props.selectedStats && <div className='firstBadge'>1</div>}
+                    {/* {firstStats.dpm1 === props.selectedStats && <div className='firstBadge'>1</div>}
                     {secondStats.dpm1 === props.selectedStats && <div className='secondBadge'>2</div>}
-                    {thirdStats.dpm1 === props.selectedStats && <div className='thirdBadge'>3</div>}
+                    {thirdStats.dpm1 === props.selectedStats && <div className='thirdBadge'>3</div>} */}
                 </div>
                 <div className='statItem'>
                     <div className='statLabel'>DPM <img src={DPM2} height={40}/></div>
                     <div className='statValue'>{totalStats[props.selectedStats].dpm2 || ''}</div>
-                    {firstStats.dpm2 === props.selectedStats && <div className='firstBadge'>1</div>}
+                    {/* {firstStats.dpm2 === props.selectedStats && <div className='firstBadge'>1</div>}
                     {secondStats.dpm2 === props.selectedStats && <div className='secondBadge'>2</div>}
-                    {thirdStats.dpm2 === props.selectedStats && <div className='thirdBadge'>3</div>}
+                    {thirdStats.dpm2 === props.selectedStats && <div className='thirdBadge'>3</div>} */}
                 </div>
                 <div className='statItem'>
                     <div className='statLabel'>DPM <img src={DPM3} height={40}/></div>
                     <div className='statValue'>{totalStats[props.selectedStats].dpm3 || ''}</div>
-                    {firstStats.dpm3 === props.selectedStats && <div className='firstBadge'>1</div>}
+                    {/* {firstStats.dpm3 === props.selectedStats && <div className='firstBadge'>1</div>}
                     {secondStats.dpm3 === props.selectedStats && <div className='secondBadge'>2</div>}
-                    {thirdStats.dpm3 === props.selectedStats && <div className='thirdBadge'>3</div>}
+                    {thirdStats.dpm3 === props.selectedStats && <div className='thirdBadge'>3</div>} */}
                 </div>
                 <div className='horizontalRuleStats'/>
                 <div className='statItem'>
@@ -72,9 +72,9 @@ const Stats = (props: StatsProps): ReactElement => {
                 <div className='statItem'>
                     <div className='statLabel'>Total Time <i style={{color: 'white'}} className="fas fa-stopwatch"></i></div>
                     <div className='statValue'>{totalStats[props.selectedStats].totalTime || ''}</div>
-                    {firstStats.totalTime === props.selectedStats && <div className='firstBadge'>1</div>}
+                    {/* {firstStats.totalTime === props.selectedStats && <div className='firstBadge'>1</div>}
                     {secondStats.totalTime === props.selectedStats && <div className='secondBadge'>2</div>}
-                    {thirdStats.totalTime === props.selectedStats && <div className='thirdBadge'>3</div>}
+                    {thirdStats.totalTime === props.selectedStats && <div className='thirdBadge'>3</div>} */}
                 </div>
             </div>
     )

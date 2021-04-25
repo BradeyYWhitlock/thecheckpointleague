@@ -242,6 +242,14 @@
             font-size: 40px;
     }
 
+    .victoryFinals {
+        top: 0px;
+        transform: skewX(0deg);
+        text-align: center;
+        width: 230px;
+        height: 180px;
+        font-size: 40px;
+    }
     .notNeeded {
         top: 0px;
         transform: skewX(0deg);
@@ -249,6 +257,15 @@
         width: 230px;
         height: 180px;
         font-size: 40px;
-}
+    }
+
+    .notNeededFinals {
+        top: 0px;
+        transform: skewX(0deg);
+        text-align: center;
+        width: 230px;
+        height: 180px;
+        font-size: 40px;
+    }
 
 }

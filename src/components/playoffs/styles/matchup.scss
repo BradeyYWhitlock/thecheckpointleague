@@ -1,3 +1,5 @@
+@import '../../../styles/colors';
+
 .matchupPage {
     display: flex;
     justify-content: center;
@@ -25,7 +27,7 @@
 }
 
 .matchupPlayerCard {
-    border: 3px solid #F3B136;
+    border: 3px solid $primarySeason1Color;
     transform: skewX(-15deg);
     padding: 10px 20px;
     width: 300px;
@@ -40,7 +42,7 @@
     flex-direction: row;
     width: 70%;
     margin-top: 50px;
-    border: 3px solid #F3B136;
+    border: 3px solid $primarySeason1Color;
     transform: skewX(-15deg);
 }
 
@@ -83,7 +85,7 @@
     margin: -30px 0px 0px 10px;
     font-size: 40px;
     background-color: #0B0D19;
-    border: 3px solid #F3B136;
+    border: 3px solid $primarySeason1Color;
     padding: 0px 15px;
 }
 
@@ -94,7 +96,7 @@
     font-size: 30px;
 
     &:hover {
-        color:#F3B136;
+        color:$primarySeason1Color;
         cursor: pointer;
     }
 }
@@ -224,7 +226,7 @@
         font-size: 30px;
 
         &:hover {
-            color:#F3B136;
+            color:$primarySeason1Color;
             cursor: pointer;
         }
     }

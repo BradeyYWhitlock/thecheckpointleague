@@ -1,6 +1,6 @@
 import React, { ReactElement, useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getIsMobile } from '../../state/selectors/app';
+import { getIsMobile, getSeason } from '../../state/selectors/app';
 
 import { NavLink } from 'react-router-dom'
 import Competitor from './Competitor';
@@ -21,6 +21,7 @@ const Standings = (): ReactElement => {
     const [selectedStats, setSelectedStats] = useState('baertaffy')
 
     const isMobile = useSelector(getIsMobile)
+    const season = useSelector(getSeason)
 
     useEffect(() => {
         isMobile && setSelectedStats('')
@@ -28,6 +29,8 @@ const Standings = (): ReactElement => {
 
     return (
         <>
+        {season !== 1 ? <div className='comingSoon'>COMING SOON</div> :
+            <>
             {!isMobile && <div className='playoffButton'>
                 <NavLink to='playoffs' className='liveButton'>See Playoffs here</NavLink>
             </div>}
@@ -59,6 +62,7 @@ const Standings = (): ReactElement => {
                 }
             </div>
             {(!isMobile || (isMobile && selectedStats !== '')) && <div style={{position: 'absolute', right: 0, bottom: 0, margin: '10px', fontSize: '20px'}}>* Full stats not shown</div>}
+            </>}
         </>
     )
 }

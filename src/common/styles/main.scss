@@ -1,3 +1,5 @@
+@import '../../styles/colors';
+
 @font-face {
     font-family: 'TCL';
     src: url('../../assets/tcl.ttf') format('truetype');
@@ -14,7 +16,7 @@ body {
     align-items: center;
     top: 0;
     height: 55px;
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
     font-size: 30px;
     width: 100%;
 }
@@ -58,7 +60,7 @@ body {
 
 .sideMenu {
     width: 200px;
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
     height: 100vh;
     font-size: 40px;
     display: flex;
@@ -94,7 +96,7 @@ body {
     align-items: center;
     color: #0B0D19;
     font-size: 20px;
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
 }
 
 .contactCreator {
@@ -104,7 +106,6 @@ body {
     text-decoration: none;
     color: #0B0D19;
     font-size: 20px;
-    background-color: #F3B136;
     padding: 0px 10px;
     padding-bottom: 5px;
 }
@@ -113,7 +114,6 @@ body {
     color: #202437;
     text-decoration: none;
     text-align: center;
-    background-color: #F3B136;
 
     &:hover {
         cursor: pointer;
@@ -127,12 +127,27 @@ body {
     color: #202437;
     text-align: center;
     font-size: 40px;
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
 
     &:hover {
         cursor: pointer;
         color: white;
     }
+}
+
+
+.seasonSelect {
+    width: 180px;
+    font-size: 30px;
+    color: #0B0D19;
+}
+
+.comingSoon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 80px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -144,7 +159,7 @@ body {
     .slideOverButton {
         color: white;
         &:hover {
-            color: #F3B136;
+            color: $primarySeason1Color;
         }
     }
 }

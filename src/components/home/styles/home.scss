@@ -8,10 +8,12 @@
 
     &Logo {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         margin: 40px 0px 20px 0px;
+        z-index: 99;
 
         & img {
             width: 100%;
@@ -31,8 +33,13 @@
     }
 }
 
+.season2 {
+    height: 130px !important;
+    width: auto !important;
+}
+
 .liveButton {
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
     padding: 20px;
     font-size: 40px;
     margin-bottom: 20px;
@@ -84,5 +91,10 @@
     .liveButton {
         padding: 10px;
         font-size: 30px;
+    }
+
+    .season2 {
+        height: 100px !important;
+        width: auto !important;
     }
   }

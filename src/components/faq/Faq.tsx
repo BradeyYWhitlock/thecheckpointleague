@@ -1,7 +1,11 @@
 import React, { ReactElement } from 'react';
+import {seasonStyle} from '../../common/util';
+import {useSelector} from 'react-redux'
+import { getSeason} from '../../state/selectors/app';
 import './styles/faq.scss'
 
 const Faq = (): ReactElement => {
+    const season = useSelector(getSeason)
 
     const faqItems = [
         { question: 'What is TCL?', answer: <div>TCL is an acronym for The Checkpoint League.</div> },
@@ -12,7 +16,7 @@ const Faq = (): ReactElement => {
         { question: 'Who gets to pick the levels?', answer: <div><div>The player with the higher seed gets to pick the majority of levels. Player with the lower seed gets one less pick.</div><div>Best of 3 = higher seed picks 2 levels, levels 1 and 3</div><div>Best of 5 = higher seed picks 3 levels, levels 1, 3, and 5</div></div> },
         { question: 'If someone wins a majority of the maps do the competitors play the rest?', answer: <div>No, after a win is secured the remaining maps are not played.</div> },
         { question: 'Why do two players not have to play week one?', answer: <div>The top two players from the regular season get a bye and skip play in week one.</div> },
-        { question: 'Will there be a season 2?', answer: <div>Maybe.</div> },
+        { question: 'Will there be a season 2?', answer: <div>Yes.</div> },
     ]
 
     return (
@@ -20,7 +24,7 @@ const Faq = (): ReactElement => {
             <div className='faqCards'>
                 {faqItems.map(faq => (
                     <div className='faqItem'>
-                        <div className='faqQuestion'>{faq.question}</div>
+                        <div style={seasonStyle(season, 'borderColor')} className='faqQuestion'>{faq.question}</div>
                         <div className='faqAnswer'>{faq.answer}</div>
                     </div>
                 ))}

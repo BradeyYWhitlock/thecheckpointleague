@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { getIsMobile } from '../../state/selectors/app';
+import { getIsMobile, getSeason } from '../../state/selectors/app';
 
 import './styles/levels.scss'
 import Level1 from '../../assets/images/level1.png'
@@ -17,8 +17,9 @@ import Flag from '../../assets/images/flag.png'
 
 const Levels = (): ReactElement => {
 
-    const [selectedLevel, setSelectedLevel] = useState('')
-    const isMobile = useSelector(getIsMobile)
+    const [selectedLevel, setSelectedLevel] = useState('');
+    const isMobile = useSelector(getIsMobile);
+    const season = useSelector(getSeason);
 
     const levels = [
         { levelImg: Level1, levelCode: '9XR-RRG-CBG', clearCheckVid: 'https://www.youtube.com/embed/MFYCEarj7R0', clearRate: '0.24%', clearTime: '1HRS 47MIN', finished: true },
@@ -36,32 +37,36 @@ const Levels = (): ReactElement => {
     var currentLevel = levels.find(it => it.levelCode === selectedLevel)
 
     return (
-        <div className='levels'>
-            {selectedLevel === '' ?
-                <div className='allLevels'>
-                    {levels.map(it => (
-                        <div className='levelItemClick' onClick={() => setSelectedLevel(it.levelCode)}>
-                            <img className='levelItem' src={it.levelImg} />
-                            <div className={`clearedFlag ${!it.finished && 'notCleared'}`}><img src={Flag} /></div>
+        <>
+        {season !== 1 ? <div className='comingSoon'>COMING SOON</div> :
+            <div className='levels'>
+                {selectedLevel === '' ?
+                    <div className='allLevels'>
+                        {levels.map(it => (
+                            <div className='levelItemClick' onClick={() => setSelectedLevel(it.levelCode)}>
+                                <img className='levelItem' src={it.levelImg} />
+                                <div className={`clearedFlag ${!it.finished && 'notCleared'}`}><img src={Flag} /></div>
+                            </div>
+                        ))}
+                    </div> :
+                    <div className='clearCheckVideo'>
+                        <div className='backToLevels'>
+                            <div onClick={() => setSelectedLevel('')} className='backToLevelsButton'>
+                                <i style={{ marginRight: '10px' }} className="fas fa-chevron-left"></i>
+                            Back To Levels
                         </div>
-                    ))}
-                </div> :
-                <div className='clearCheckVideo'>
-                    <div className='backToLevels'>
-                        <div onClick={() => setSelectedLevel('')} className='backToLevelsButton'>
-                            <i style={{ marginRight: '10px' }} className="fas fa-chevron-left"></i>
-                        Back To Levels
-                    </div>
-                        <div className='levelCodeVideo'>Level Code: {selectedLevel}</div>
-                    </div>
-                    {currentLevel.clearCheckVid !== '' && <iframe style={{ border: 'none' }} width={isMobile ? "360" : "1120"} height={isMobile ? "200" : "630"} src={currentLevel.clearCheckVid} ></iframe>}
-                    {currentLevel.clearCheckVid === '' && <div className='tbdVideo'>Video Coming Soon!</div>}
-                    <div className='levelStats'>
-                        <div>Clear Rate: {currentLevel.clearRate}</div>
-                        <div>Clear Check Time: {currentLevel.clearTime}</div>
-                    </div>
-                </div>}
-        </div>
+                            <div className='levelCodeVideo'>Level Code: {selectedLevel}</div>
+                        </div>
+                        {currentLevel.clearCheckVid !== '' && <iframe style={{ border: 'none' }} width={isMobile ? "360" : "1120"} height={isMobile ? "200" : "630"} src={currentLevel.clearCheckVid} ></iframe>}
+                        {currentLevel.clearCheckVid === '' && <div className='tbdVideo'>Video Coming Soon!</div>}
+                        <div className='levelStats'>
+                            <div>Clear Rate: {currentLevel.clearRate}</div>
+                            <div>Clear Check Time: {currentLevel.clearTime}</div>
+                        </div>
+                    </div>}
+            </div>
+        }
+        </>
     )
 }
 

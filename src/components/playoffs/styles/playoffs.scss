@@ -1,3 +1,5 @@
+@import '../../../styles/colors';
+
 .playoffs {
     display: flex;
     justify-content: space-evenly;
@@ -31,7 +33,7 @@
 }
 
 .winInPlayoffBraket {
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
 }
 
 .nextRound {
@@ -138,7 +140,7 @@
     margin: -10px 0px 0px -10px;
     color: #0B0D19;
     text-shadow: none;
-    background-color: #F3B136;
+    background-color: $primarySeason1Color;
     font-size: 30px;
     border: 1px solid #0B0D19;
 }
